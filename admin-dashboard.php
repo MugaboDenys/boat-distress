@@ -12,7 +12,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
 </head>
 <body>
 	<h1>Welcome, <?php echo $username; ?></h1>
-	<p>This is your dashboard page.</p>
 	<a href="logout.php">Logout</a> <!-- add a logout button/link -->
 </body>
 </html>
@@ -24,7 +23,7 @@ $(document).ready(function() {
     $("#myDiv").load("status.php");
     var refreshId = setInterval(function() {
         $("#myDiv").load('status.php?randval='+ Math.random());
-    }, 1000);
+    }, 500);
 });
 </script>
   <main id="main" class="main">
@@ -53,10 +52,6 @@ include('home.php');
 <div class="container">
 <div class="row" >
  <!--<div class="card  col-12"   >-->
-
- 
- 
- 
  <?php 
     $agent=$_GET['SfsfgXa543F'];
                 $i=1;
@@ -77,12 +72,12 @@ include('home.php');
         <th>#</th>
         <th>S/N</th>
         <!--<th>Plate Number</th>-->
-        <th>Boat  Speed </th>
-        <th>water_level</th>
-        <th>Boat linkage</th>
+        <th>Boat Speed </th>
+        <th>Water Level</th>
+        <th>Boat Leakage</th>
        
-        <th>Emerence Help</th> 
-        <th>Lcation</th>
+        <th>Emergency Help</th> 
+        <th>Location</th>
         <th>Due Time </th>
         <!-- <th>Location</th>
         <th>functionality</th>
@@ -104,7 +99,7 @@ include('home.php');
           <td><?=$tractor['speed']?></td>
           <td> <?=substr(((($tractor['water_level'])*100)/450),0,4)?> % </td>
           <td><?if($tractor['wter_presence']==1){ ?>
-              LINKING <?}else{?> No LINKING<?}?></td>
+              Leak detected <?}else{?> No Leak<?}?></td>
           <td><?if($tractor['emeragance']==1){ ?>
               Required <?}else{?> Not required<?}?> <i class="bi bi-wave-alt"></i></td>
           <td>
@@ -130,11 +125,11 @@ include('home.php');
         <th>S/N</th>
         <!--<th>Plate Number</th>-->
         <th>Boat  Speed </th>
-        <th>water_level</th>
-        <th>Boat linkage</th>
+        <th>Water level</th>
+        <th>Boat leakage</th>
        
-        <th>Emerence Help</th> 
-        <th>Lcation</th>
+        <th>Emergency Help</th> 
+        <th>Location</th>
         <th>Due Time </th>
         <!-- <th>Location</th>
         <th>functionality</th>

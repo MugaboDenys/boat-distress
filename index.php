@@ -85,14 +85,14 @@
                       </div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-12 pt-2">
                       <label for="yourPassword" class="form-label">Password</label>
                       <input type="password" name="password" class="form-control" id="yourPassword" >
                       <div class="invalid-feedback">Please enter your password!</div>
                     </div>
 
                
-                    <div class="col-12">
+                    <div class="col-12 pt-4">
                         <!--<button type="submit">Log in</button>-->
                       <button class="btn btn-primary w-100" type="submit">Login</button>
                     </div>

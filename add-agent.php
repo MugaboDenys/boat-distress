@@ -99,7 +99,7 @@ include('naviba.php');
     <section id="rent" class="appointment section">
         <div class="container-fluid" data-aos="fade-up">
         <div class="row" data-aos="fade-up">
-        <div class="col-md-3   bg-warning">
+        <div class="col-md-3 bg-warning">
           <div class="section-title text-center">
             <h2 style="font-size 8px;">new safe-Boat tracker</h2>
           </div>
